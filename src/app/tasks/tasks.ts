@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { user } from '../app.component';
 import { Task } from "./task/task";
 import { AddTaskDialog } from './add-task-dialog/add-task-dialog';
+import { newTaskData } from './task/task';
 
 @Component({
   selector: 'app-tasks',
@@ -50,5 +51,16 @@ export class Tasks {
 
   toggleAddTask() {
     this.addTaskDialogOpen = !this.addTaskDialogOpen;
+  }
+
+  onAddTask(taskData: newTaskData) {
+    const newTask = {
+      id: 't' + (this.dummyTasks.length + 1),
+      userId: this.user.id,
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.date,
+    };
+    this.dummyTasks.unshift(newTask);
   }
 }

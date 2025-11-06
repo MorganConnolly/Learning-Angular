@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { AppCard } from '../../app-card/app-card';
+import { DatePipe } from '@angular/common';
 
 export type task = {
   id: string;
@@ -8,9 +10,15 @@ export type task = {
   dueDate: string;
 };
 
+export type newTaskData = {
+  title: string;
+  summary: string;
+  date: string;
+}
+
 @Component({
   selector: 'app-task',
-  imports: [],
+  imports: [AppCard, DatePipe],
   templateUrl: './task.html',
   styleUrl: './task.css',
 })
