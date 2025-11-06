@@ -1,0 +1,23 @@
+<section id="tasks">
+    <header>
+        <h2>{{ user.name }}'s Tasks</h2>
+        <menu>
+            <button (click)="toggleAddTask()">Add Tasks</button>
+        </menu>
+    </header>
+
+    @if (addTaskDialogOpen) {
+        <app-add-task-dialog
+            [user]="user"
+            (close)="toggleAddTask()"
+        />
+    }
+
+    <ul>
+        @for (task of selectedUserTasks; track task.id) {
+            <li>
+                <app-task [task]="task" (complete)="onCompleteTask($event)"/>
+            </li>
+        }
+    </ul>
+</section>
