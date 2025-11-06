@@ -1,4 +1,4 @@
-Code developed from my engagement with [The Complete Guide to Angular (Udemy)](https://www.udemy.com/course/the-complete-guide-to-angular-2/) which I studied to strengthen my skills in preparation to work with Bluefuse's two largest clients during m work placement.
+Code developed from my engagement with [The Complete Guide to Angular (Udemy)](https://www.udemy.com/course/the-complete-guide-to-angular-2/) which I studied to strengthen my skills in preparation to work with Bluefuse's two largest clients during my work placement.
 
 # Essentials
 
